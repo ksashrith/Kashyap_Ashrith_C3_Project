@@ -54,6 +54,10 @@ public class Restaurant {
 
 		menu.remove(itemToBeRemoved);
 	}
+	
+	public Integer getOrderTotal(List<String> items) {
+		return null;
+	}
 
 	public void displayDetails() {
 		System.out.println("Restaurant:" + name + "\n" + "Location:" + location + "\n" + "Opening time:" + openingTime
