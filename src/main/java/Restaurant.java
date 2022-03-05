@@ -30,11 +30,6 @@ public class Restaurant {
 	}
 
 	public List<Item> getMenu() {
-		List<Item> menu= new ArrayList<Item>();
-		menu.add(new Item("Masala Dose", 40));
-		menu.add(new Item("Idli", 30));
-		menu.add(new Item("Masala Vada", 40));
-		menu.add(new Item("Pasta", 100));
 		return menu;
 	}
 
