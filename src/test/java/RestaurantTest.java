@@ -59,6 +59,7 @@ class RestaurantTest {
         restaurant.addToMenu("Sizzling brownie",319);
         assertEquals(initialMenuSize+1,restaurant.getMenu().size());
     }
+    
     @Test
     public void removing_item_from_menu_should_decrease_menu_size_by_1() throws itemNotFoundException {
 
@@ -76,7 +77,7 @@ class RestaurantTest {
     
     
     @Test
-    public void getting_order_total_success_scenario() {
+    public void getting_order_total_success_scenario() throws itemNotFoundException {
     	List<String> items= new ArrayList<String>(); 
     	items.add("Vegetable lasagne");
     	items.add("Sweet corn soup");

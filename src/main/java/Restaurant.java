@@ -55,8 +55,22 @@ public class Restaurant {
 		menu.remove(itemToBeRemoved);
 	}
 	
-	public Integer getOrderTotal(List<String> items) {
-		return null;
+	public Integer getOrderTotal(List<String> items) throws itemNotFoundException{
+		Integer total=0;
+		for(String item:items) {
+			if(!menu.stream().anyMatch(e->(e.getName().equals(item)))) {
+				throw new itemNotFoundException("Item not found in menu");
+			}
+			else
+			for(Item obj: menu) {
+				if(item.equalsIgnoreCase(obj.getName())) {
+					total+=obj.getPrice();
+					break;
+				}
+			}
+		}
+		
+		return total;
 	}
 
 	public void displayDetails() {
